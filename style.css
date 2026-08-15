@@ -823,41 +823,696 @@ img {
    1200px+
 ========================= */
 
-@media (min-width: 1200px) {
-  .navbar {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
+/* =========================================================
+   POWER PLUS - FINAL RESPONSIVE
+   Mobile / Tablet / Laptop / Desktop
+   ========================================================= */
 
-  .hero-content {
-    max-width: 620px;
-  }
+/* =========================================================
+   0. GLOBAL RESPONSIVE SAFETY
+   ========================================================= */
 
-  .stats {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .programs-grid,
-  .trainers,
-  .gallery-grid,
-  .pricing,
-  .consultation,
-  .footer-content {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-/* =========================
-   LAPTOP
-   993px - 1199px
-========================= */
 
-@media (min-width: 993px) and (max-width: 1199px) {
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section,
+header,
+footer {
+  max-width: 100%;
+}
+
+/* =========================================================
+   1. HEADER / NAVBAR
+   ========================================================= */
+
+header {
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+  padding: 18px 5%;
+}
+
+/* Logo */
+
+.logo {
+  flex-shrink: 0;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  width: 65px;
+  height: auto;
+  object-fit: contain;
+}
+
+.logo span {
+  display: none;
+}
+
+/* Navbar menu */
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 30px;
+  flex: 1;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.navbar-content li {
+  white-space: nowrap;
+}
+
+.navbar-content a {
+  position: relative;
+  display: inline-block;
+
+  color: var(--white);
+  text-decoration: none;
+
+  white-space: nowrap;
+}
+
+/* Navbar button */
+
+.navbar > .btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   2. HERO
+   ========================================================= */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding: 80px 5%;
+}
+
+/* اگر تصویر مستقیماً داخل hero باشد */
+
+.hero-img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+.hero-img > img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+}
+
+/* اگر از hero-bg استفاده کرده باشی */
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  z-index: 1;
+}
+
+/* Hero content */
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+
+  width: 100%;
+  max-width: 620px;
+
+  margin-right: auto;
+  margin-left: 0;
+
+  text-align: right;
+}
+
+/* Hero buttons */
+
+.hero-button {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   3. STATS
+   ========================================================= */
+
+.stats {
+  position: relative;
+  z-index: 20;
+
+  width: min(90%, 1100px);
+
+  margin: -55px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  align-items: stretch;
+
+  background: var(--surface, #111111);
+
+  border: 1px solid var(--border, #2a2a2a);
+
+  border-radius: 16px;
+
+  overflow: hidden;
+}
+
+/* هر کارت */
+
+.stats-card {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 22px 15px;
+
+  text-align: center;
+
+  border-left: 1px solid var(--border, #2a2a2a);
+}
+
+.stats-card:last-child {
+  border-left: none;
+}
+
+.stats-card h3 {
+  margin: 0;
+
+  color: var(--white);
+
+  font-size: clamp(24px, 3vw, 36px);
+
+  line-height: 1;
+}
+
+.stats-card span {
+  color: var(--gray);
+
+  font-size: 14px;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   4. COMMON SECTION
+   ========================================================= */
+
+.programs,
+.trainers,
+.gallery,
+.pricing,
+.consultation {
+  width: min(90%, 1100px);
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  width: 100%;
+
+  text-align: center;
+
+  margin-bottom: 35px;
+}
+
+.section-title h3 {
+  margin: 0;
+
+  color: var(--white);
+
+  font-size: clamp(24px, 3vw, 34px);
+}
+
+/* =========================================================
+   5. PROGRAMS
+   ========================================================= */
+
+.programs {
+  padding-top: 90px;
+  padding-bottom: 80px;
+}
+
+.programs-card {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  background: var(--surface, #111111);
+
+  border: 1px solid var(--border, #2a2a2a);
+}
+
+.programs-card img {
+  display: block;
+
+  width: 100%;
+  height: 190px;
+
+  object-fit: cover;
+}
+
+.programs-card h4,
+.programs-card span {
+  margin-right: 18px;
+  margin-left: 18px;
+}
+
+.programs-card h4 {
+  margin-top: 18px;
+  margin-bottom: 8px;
+
+  color: var(--white);
+}
+
+.programs-card span {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: var(--gray);
+}
+
+/* اگر cards داخل programs مستقیماً هستند */
+
+.programs {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 14px;
+}
+
+.programs .section-title {
+  grid-column: 1 / -1;
+}
+
+/* =========================================================
+   6. TRAINERS
+   ========================================================= */
+
+.trainers {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+  padding-bottom: 80px;
+}
+
+.trainers .section-title {
+  grid-column: 1 / -1;
+}
+
+.trainers-card {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 18px;
+
+  background: var(--surface, #111111);
+
+  border: 1px solid var(--border, #2a2a2a);
+
+  border-radius: 12px;
+
+  overflow: hidden;
+}
+
+.trainers-card img {
+  width: 115px;
+  height: 145px;
+
+  flex-shrink: 0;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+}
+
+.trainers-card h4 {
+  color: var(--white);
+
+  margin: 0 0 8px;
+}
+
+.trainers-card span {
+  display: block;
+
+  color: var(--gray);
+
+  font-size: 13px;
+
+  margin-bottom: 5px;
+}
+
+/* =========================================================
+   7. GALLERY
+   ========================================================= */
+
+.gallery {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 14px;
+
+  padding-bottom: 90px;
+}
+
+.gallery .section-title {
+  grid-column: 1 / -1;
+}
+
+.gallery-card {
+  position: relative;
+
+  min-width: 0;
+
+  height: 180px;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  border: 1px solid var(--border, #2a2a2a);
+}
+
+.gallery-card img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: var(--transition);
+}
+
+.gallery-card:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-card span {
+  position: absolute;
+
+  right: 15px;
+  bottom: 15px;
+
+  z-index: 2;
+
+  color: var(--white);
+
+  font-weight: 700;
+}
+
+/* تاریک کردن پایین عکس */
+
+.gallery-card::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent 55%);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   8. PRICING
+   ========================================================= */
+
+.pricing {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+  padding-bottom: 80px;
+}
+
+.pricing .section-title {
+  grid-column: 1 / -1;
+}
+
+.pricing-card {
+  min-width: 0;
+
+  padding: 30px 25px;
+
+  text-align: center;
+
+  background: var(--surface, #111111);
+
+  border: 1px solid var(--border, #2a2a2a);
+
+  border-radius: 14px;
+}
+
+.pricing-card h4 {
+  color: var(--white);
+
+  margin-top: 0;
+}
+
+.pricing-card h3 {
+  color: var(--primary);
+
+  font-size: 32px;
+
+  margin: 10px 0 20px;
+}
+
+.pricing-card span,
+.pricing-card p {
+  color: var(--gray);
+}
+
+.pricing-card p {
+  margin: 8px 0;
+}
+
+.pricing-card a {
+  display: block;
+
+  margin-top: 25px;
+
+  padding: 13px;
+
+  border-radius: 10px;
+
+  background: var(--primary);
+
+  color: var(--white);
+
+  text-decoration: none;
+}
+
+/* =========================================================
+   9. CONSULTATION
+   ========================================================= */
+
+.consultation {
+  padding-bottom: 90px;
+}
+
+.consultation-content {
+  width: 100%;
+
+  padding: 35px;
+
+  background: var(--surface, #111111);
+
+  border: 1px solid var(--border, #2a2a2a);
+
+  border-radius: 14px;
+}
+
+.consultation-content h2 {
+  margin-top: 0;
+
+  color: var(--white);
+}
+
+.consultation-content > p {
+  color: var(--gray);
+
+  margin-bottom: 25px;
+}
+
+.form {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 15px;
+}
+
+.form > form {
+  grid-column: 1 / -1;
+}
+
+.name-form,
+.tel-form,
+.form > form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.form label {
+  color: var(--white);
+
+  font-size: 14px;
+}
+
+.form input,
+.form select {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border-radius: 10px;
+
+  border: 1px solid var(--border, #333);
+
+  background: #151515;
+
+  color: var(--white);
+
+  outline: none;
+}
+
+.form input:focus,
+.form select:focus {
+  border-color: var(--primary);
+}
+
+/* =========================================================
+   10. FOOTER
+   ========================================================= */
+
+footer {
+  width: 100%;
+
+  position: relative;
+
+  z-index: 10;
+}
+
+.footer-container {
+  width: min(90%, 1100px);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1.5fr 1fr 1fr;
+
+  gap: 40px;
+}
+
+/* =========================================================
+   11. LARGE LAPTOP
+   1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
   .navbar {
-    padding: 20px 4%;
-    gap: 20px;
+    padding-left: 4%;
+    padding-right: 4%;
   }
 
   .navbar-content {
@@ -865,45 +1520,31 @@ img {
   }
 
   .hero {
-    min-height: 90vh;
+    padding-left: 6%;
+    padding-right: 6%;
   }
 
-  .hero-content {
-    max-width: 560px;
+  .programs {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .hero-content h1 {
-    font-size: clamp(48px, 6vw, 72px);
-  }
-
-  .hero-content p {
-    font-size: 17px;
-  }
-
-  .stats {
-    width: 90%;
-  }
-
-  .programs-grid {
-    width: 90%;
-  }
-
-  .gallery-grid {
-    width: 90%;
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-/* =========================
-   TABLET
-   769px - 992px
-========================= */
 
-@media (min-width: 769px) and (max-width: 992px) {
-  /* ---------- NAVBAR ---------- */
+/* =========================================================
+   12. TABLET
+   992px
+   ========================================================= */
+
+@media (max-width: 992px) {
+  /* ---------- Navbar ---------- */
 
   .navbar {
-    width: 100%;
-    padding: 18px 5%;
     gap: 20px;
+
+    padding: 15px 4%;
   }
 
   .navbar-content {
@@ -914,486 +1555,198 @@ img {
     font-size: 14px;
   }
 
-  .navbar > .btn {
-    padding: 12px 18px;
-    font-size: 14px;
-  }
-
-  /* ---------- HERO ---------- */
-
-  .hero {
-    min-height: 88vh;
-    padding: 80px 6%;
-  }
-
-  .hero-content {
-    max-width: 620px;
-    margin-right: 0;
-  }
-
-  .hero-content h1 {
-    font-size: clamp(48px, 7vw, 70px);
-  }
-
-  .hero-content p {
-    font-size: 17px;
-    line-height: 1.9;
-  }
-
-  /* ---------- STATS ---------- */
-
-  .stats {
-    width: 90%;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 0;
-  }
-
-  .stats-card {
-    min-width: 0;
-    padding: 20px 10px;
-  }
-
-  .stats-card h3 {
-    font-size: 27px;
-    white-space: nowrap;
-  }
-
-  .stats-card span {
-    font-size: 13px;
-  }
-
-  /* ---------- PROGRAMS ---------- */
-
-  .programs {
-    padding: 80px 5%;
-  }
-
-  .programs-grid {
-    grid-template-columns: repeat(2, 1fr);
-    width: 100%;
-  }
-
-  .programs-card {
-    height: 340px;
-  }
-
-  /* ---------- TRAINERS ---------- */
-
-  .trainers {
-    width: 90%;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .trainers .section-title {
-    grid-column: 1 / -1;
-  }
-
-  /* ---------- GALLERY ---------- */
-
-  .gallery {
-    padding: 80px 5%;
-  }
-
-  .gallery-grid {
-    width: 100%;
-
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 280px 280px 280px;
-  }
-
-  .gallery-large {
-    grid-row: 1 / 3;
-  }
-
-  .gallery-wide {
-    grid-column: 1 / 3;
-  }
-
-  /* ---------- PRICING ---------- */
-
-  .pricing {
-    width: 90%;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 15px;
-  }
-
-  .pricing .section-title {
-    grid-column: 1 / -1;
-  }
-
-  .pricing-card {
-    min-width: 0;
-    padding: 25px 18px;
-  }
-
-  /* ---------- CONSULTATION ---------- */
-
-  .consultation {
-    width: 90%;
-  }
-}
-/* =========================
-   MOBILE
-   577px - 768px
-========================= */
-
-@media (min-width: 577px) and (max-width: 768px) {
-  /* ---------- NAVBAR ---------- */
-
-  header {
-    position: relative;
-    z-index: 100;
-  }
-
-  .navbar {
-    width: 100%;
-    padding: 14px 5%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 15px;
-    flex-wrap: nowrap;
-  }
-
-  .navbar-content {
-    display: none;
-  }
-
-  .logo {
-    flex-shrink: 0;
-  }
-
   .logo img {
-    width: 65px;
-    height: auto;
+    width: 58px;
   }
 
-  .logo span {
-    display: none;
-  }
-
-  .navbar > .btn {
-    flex-shrink: 0;
-
-    padding: 12px 20px;
-    font-size: 14px;
-  }
-
-  /* ---------- HERO ---------- */
+  /* ---------- Hero ---------- */
 
   .hero {
-    min-height: 88vh;
-    padding: 80px 5% 60px;
+    min-height: 85vh;
 
-    display: flex;
-    align-items: center;
+    padding: 100px 6% 70px;
   }
 
   .hero-content {
-    width: 100%;
-    max-width: 100%;
+    max-width: 650px;
 
     margin: 0 auto;
 
     text-align: center;
-  }
-
-  .hero-content h1 {
-    font-size: clamp(44px, 9vw, 64px);
-    line-height: 1.1;
-  }
-
-  .hero-content p {
-    font-size: 16px;
-    line-height: 2;
   }
 
   .hero-button {
     justify-content: center;
   }
 
-  .hero-scroll {
-    text-align: center;
-    padding-right: 0;
-  }
-
-  /* ---------- STATS ---------- */
+  /* ---------- Stats ---------- */
 
   .stats {
     width: 90%;
 
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
 
-    gap: 1px;
-
-    margin: 0 auto;
+    margin-top: -35px;
   }
 
   .stats-card {
-    min-width: 0;
-    padding: 22px 10px;
-    text-align: center;
+    border-bottom: 1px solid var(--border, #2a2a2a);
   }
 
-  .stats-card h3 {
-    font-size: 27px;
-    white-space: nowrap;
+  .stats-card:nth-child(2) {
+    border-left: none;
   }
 
-  .stats-card span {
-    font-size: 13px;
-    line-height: 1.8;
+  .stats-card:nth-child(3),
+  .stats-card:nth-child(4) {
+    border-bottom: none;
   }
 
-  /* ---------- PROGRAMS ---------- */
+  /* ---------- Programs ---------- */
 
   .programs {
-    padding: 70px 5%;
-  }
-
-  .programs .section-title {
-    text-align: center;
-  }
-
-  .programs-grid {
     grid-template-columns: repeat(2, 1fr);
-    width: 100%;
+
+    padding-top: 70px;
   }
 
-  .programs-card {
-    height: 300px;
-  }
-
-  .programs-card-content {
-    right: 18px;
-    bottom: 18px;
-  }
-
-  .programs-card h4 {
-    font-size: 20px;
-  }
-
-  /* ---------- TRAINERS ---------- */
+  /* ---------- Trainers ---------- */
 
   .trainers {
-    width: 90%;
-
-    display: grid;
     grid-template-columns: 1fr 1fr;
-
-    gap: 15px;
   }
 
-  .trainers .section-title {
-    grid-column: 1 / -1;
-    text-align: center;
-  }
-
-  /* ---------- GALLERY ---------- */
+  /* ---------- Gallery ---------- */
 
   .gallery {
-    padding: 70px 5%;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .gallery .section-title {
-    text-align: center;
-  }
-
-  .gallery-grid {
-    width: 100%;
-
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 250px 250px 250px;
-  }
-
-  .gallery-large {
-    grid-row: 1 / 3;
-  }
-
-  .gallery-wide {
-    grid-column: 1 / 3;
-  }
-
-  /* ---------- PRICING ---------- */
+  /* ---------- Pricing ---------- */
 
   .pricing {
-    width: 90%;
-
-    display: grid;
     grid-template-columns: 1fr 1fr;
-
-    gap: 18px;
-  }
-
-  .pricing .section-title {
-    grid-column: 1 / -1;
-    text-align: center;
-  }
-
-  .pricing-card {
-    min-width: 0;
-    padding: 25px 18px;
   }
 
   .pricing-card:last-child {
     grid-column: 1 / -1;
+
+    max-width: 500px;
+
+    width: 100%;
+
+    margin: 0 auto;
   }
 
-  /* ---------- CONSULTATION ---------- */
+  /* ---------- Footer ---------- */
 
-  .consultation {
-    width: 90%;
-  }
-
-  .consultation-content {
-    text-align: center;
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
   }
 }
-/* =========================
-   SMALL MOBILE
-   0 - 576px
-========================= */
 
-@media (max-width: 576px) {
-  /* =====================
-       GLOBAL
-    ===================== */
+/* =========================================================
+   13. MOBILE LARGE
+   768px
+   ========================================================= */
 
-  body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  section {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  /* =====================
+@media (max-width: 768px) {
+  /* =====================================================
        NAVBAR
-    ===================== */
+       ===================================================== */
 
   header {
     position: relative;
-    z-index: 100;
+
+    background: var(--background, #080808);
   }
 
   .navbar {
     width: 100%;
-    min-height: 70px;
 
-    padding: 12px 5%;
+    display: grid;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    grid-template-columns: 1fr auto;
 
-    gap: 10px;
+    grid-template-areas:
+      "logo button"
+      "menu menu";
 
-    flex-wrap: nowrap;
-  }
+    gap: 15px;
 
-  .navbar-content {
-    display: none;
+    padding: 14px 5%;
   }
 
   .logo {
-    flex-shrink: 0;
-  }
-
-  .logo a {
-    display: flex;
-    align-items: center;
+    grid-area: logo;
   }
 
   .logo img {
-    width: 58px;
-    height: auto;
-    display: block;
-  }
-
-  .logo span {
-    display: none;
+    width: 55px;
   }
 
   .navbar > .btn {
-    display: inline-flex;
+    grid-area: button;
 
-    width: auto;
+    padding: 11px 18px;
 
-    padding: 11px 16px;
-
-    font-size: 12px;
-
-    border-radius: 10px;
-
-    white-space: nowrap;
+    font-size: 13px;
   }
 
-  /* =====================
-       HERO
-    ===================== */
+  .navbar-content {
+    grid-area: menu;
 
-  .hero {
     width: 100%;
-    min-height: 760px;
-
-    padding: 70px 5% 50px;
 
     display: flex;
-    align-items: center;
+
     justify-content: center;
 
-    overflow: hidden;
+    gap: 20px;
+
+    padding-top: 10px;
+
+    border-top: 1px solid var(--border, #222);
+  }
+
+  .navbar-content a {
+    font-size: 13px;
+  }
+
+  /* =====================================================
+       HERO
+       ===================================================== */
+
+  .hero {
+    min-height: 780px;
+
+    padding: 70px 5% 90px;
+
+    align-items: center;
   }
 
   .hero-content {
     width: 100%;
-    max-width: 100%;
 
-    margin: 0 auto;
+    max-width: 600px;
 
     text-align: center;
 
-    overflow: hidden;
-  }
-
-  .hero-subtitle {
-    font-size: 12px;
-    margin-bottom: 12px;
+    margin: 0 auto;
   }
 
   .hero-content h1 {
-    font-size: clamp(42px, 12vw, 58px);
+    font-size: clamp(46px, 11vw, 70px);
 
-    line-height: 1.08;
-
-    margin-bottom: 18px;
-
-    word-break: normal;
+    line-height: 1.05;
   }
 
   .hero-content p {
-    width: 100%;
-
-    font-size: 15px;
+    font-size: 16px;
 
     line-height: 2;
 
-    margin-bottom: 25px;
+    margin-bottom: 28px;
   }
 
   .hero-button {
@@ -1411,20 +1764,14 @@ img {
   .hero-button .btn,
   .hero-button .btn-outline {
     width: 100%;
-
-    min-height: 56px;
-
-    padding: 14px 20px;
   }
 
   .hero-scroll {
-    margin-top: 30px;
+    margin-top: 35px;
 
     text-align: center;
 
     padding-right: 0;
-
-    font-size: 13px;
   }
 
   .hero-scroll::before {
@@ -1435,348 +1782,431 @@ img {
     transform: translateX(50%);
   }
 
-  /* =====================
+  /* =====================================================
        STATS
-    ===================== */
+       ===================================================== */
 
   .stats {
     width: 90%;
 
-    margin: 0 auto;
+    margin-top: -25px;
 
-    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 
-    grid-template-columns: 1fr 1fr;
-
-    gap: 1px;
-
-    overflow: hidden;
-
-    border-radius: 18px;
+    border-radius: 15px;
   }
 
   .stats-card {
-    width: 100%;
     min-width: 0;
 
-    padding: 22px 8px;
+    flex-direction: column;
 
-    text-align: center;
+    gap: 8px;
 
-    overflow: hidden;
+    padding: 20px 10px;
   }
 
   .stats-card h3 {
     font-size: 25px;
-
-    white-space: nowrap;
-
-    margin-bottom: 6px;
   }
 
   .stats-card span {
-    display: block;
-
     font-size: 12px;
-
-    line-height: 1.8;
 
     white-space: normal;
   }
 
-  /* =====================
-       SECTION TITLES
-    ===================== */
-
-  .section-title {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .section-title h3 {
-    font-size: 28px;
-
-    line-height: 1.4;
-  }
-
-  /* =====================
+  /* =====================================================
        PROGRAMS
-    ===================== */
+       ===================================================== */
 
   .programs {
-    width: 100%;
+    width: 90%;
 
-    padding: 65px 5%;
+    grid-template-columns: repeat(2, 1fr);
 
-    overflow: hidden;
+    gap: 12px;
+
+    padding-top: 80px;
   }
 
-  .programs .section-title {
-    text-align: center;
-
-    margin-bottom: 30px;
-  }
-
-  .programs-grid {
-    width: 100%;
-
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    gap: 15px;
-  }
-
-  .programs-card {
-    width: 100%;
-
-    height: 300px;
-
-    min-width: 0;
-  }
-
-  .programs-card-content {
-    right: 18px;
-    bottom: 18px;
+  .programs-card img {
+    height: 150px;
   }
 
   .programs-card h4 {
-    font-size: 20px;
+    font-size: 15px;
+
+    margin-right: 12px;
+    margin-left: 12px;
   }
 
   .programs-card span {
-    font-size: 13px;
+    font-size: 12px;
+
+    margin-right: 12px;
+    margin-left: 12px;
   }
 
-  /* =====================
+  /* =====================================================
        TRAINERS
-    ===================== */
+       ===================================================== */
 
   .trainers {
     width: 90%;
 
-    margin: 0 auto;
-
-    display: grid;
-
     grid-template-columns: 1fr;
-
-    gap: 15px;
-  }
-
-  .trainers .section-title {
-    grid-column: auto;
-
-    text-align: center;
-  }
-
-  .trainers-card {
-    width: 100%;
-
-    min-width: 0;
-  }
-
-  .trainers-card img {
-    max-width: 100%;
-  }
-
-  /* =====================
-       GALLERY
-    ===================== */
-
-  .gallery {
-    width: 100%;
-
-    padding: 65px 5%;
-
-    overflow: hidden;
-  }
-
-  .gallery .section-title {
-    text-align: center;
-
-    margin-bottom: 30px;
-  }
-
-  .gallery-grid {
-    width: 100%;
-
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    grid-template-rows: none;
-
-    gap: 15px;
-  }
-
-  .gallery-card,
-  .gallery-large,
-  .gallery-wide {
-    width: 100%;
-
-    height: 280px;
-
-    grid-column: auto;
-
-    grid-row: auto;
-
-    min-width: 0;
-  }
-
-  .gallery-card img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-  }
-
-  /* =====================
-       PRICING
-    ===================== */
-
-  .pricing {
-    width: 90%;
-
-    margin: 0 auto;
-
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    gap: 18px;
-  }
-
-  .pricing .section-title {
-    grid-column: auto;
-
-    text-align: center;
-  }
-
-  .pricing-card {
-    width: 100%;
-
-    min-width: 0;
-
-    padding: 28px 20px;
-
-    text-align: center;
-  }
-
-  .pricing-card:last-child {
-    grid-column: auto;
-  }
-
-  .pricing-card h3 {
-    font-size: 30px;
-  }
-
-  /* =====================
-       CONSULTATION
-    ===================== */
-
-  .consultation {
-    width: 90%;
-
-    margin: 0 auto;
-
-    overflow: hidden;
-  }
-
-  .consultation-content {
-    width: 100%;
-
-    text-align: center;
-  }
-
-  .consultation-content h2 {
-    font-size: 28px;
-
-    line-height: 1.5;
-  }
-
-  .consultation-content p {
-    font-size: 14px;
-
-    line-height: 1.9;
-  }
-
-  .form {
-    width: 100%;
-
-    display: flex;
-
-    flex-direction: column;
 
     gap: 12px;
   }
 
-  .name-form,
-  .tel-form,
-  .form form {
+  .trainers-card {
     width: 100%;
   }
 
-  .name-form input,
-  .tel-form input,
-  .form select {
-    width: 100%;
+  /* =====================================================
+       GALLERY
+       ===================================================== */
 
-    max-width: 100%;
+  .gallery {
+    width: 90%;
 
-    box-sizing: border-box;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
   }
 
-  /* =====================
-       FOOTER
-    ===================== */
-
-  footer {
-    width: 100%;
-
-    padding: 55px 5% 20px;
-
-    overflow: hidden;
+  .gallery-card {
+    height: 160px;
   }
 
-  .footer-content {
-    width: 100%;
+  /* =====================================================
+       PRICING
+       ===================================================== */
 
-    display: grid;
+  .pricing {
+    width: 90%;
 
     grid-template-columns: 1fr;
 
-    gap: 35px;
+    gap: 15px;
+  }
+
+  .pricing-card:last-child {
+    grid-column: auto;
+
+    max-width: none;
+  }
+
+  /* =====================================================
+       CONSULTATION
+       ===================================================== */
+
+  .consultation {
+    width: 90%;
+  }
+
+  .consultation-content {
+    padding: 25px 18px;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .form > form {
+    grid-column: auto;
+  }
+
+  /* =====================================================
+       FOOTER
+       ===================================================== */
+
+  .footer-container {
+    width: 90%;
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    text-align: center;
+  }
+}
+
+/* =========================================================
+   14. MOBILE SMALL
+   576px
+   ========================================================= */
+
+@media (max-width: 576px) {
+  /* ---------- Navbar ---------- */
+
+  .navbar {
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "logo"
+      "button"
+      "menu";
+
+    justify-items: center;
 
     text-align: center;
   }
 
-  .footer-about,
-  .footer-links,
-  .footer-contact {
-    width: 100%;
-    min-width: 0;
+  .logo img {
+    width: 60px;
   }
 
-  .footer-about p {
-    max-width: 100%;
+  .navbar > .btn {
+    width: auto;
 
-    margin: auto;
+    min-width: 140px;
   }
 
-  .footer-links ul {
-    align-items: center;
-  }
-
-  .footer-bottom {
+  .navbar-content {
     width: 100%;
 
-    margin-top: 35px;
+    gap: 14px;
 
-    text-align: center;
+    justify-content: space-between;
+  }
 
+  .navbar-content a {
     font-size: 12px;
+  }
+
+  /* ---------- Hero ---------- */
+
+  .hero {
+    min-height: 720px;
+
+    padding: 60px 5% 80px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(42px, 12vw, 58px);
+
+    margin-bottom: 18px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+
+    line-height: 2;
+
+    margin-bottom: 25px;
+  }
+
+  .hero-button .btn,
+  .hero-button .btn-outline {
+    padding: 14px 20px;
+
+    font-size: 14px;
+  }
+
+  /* ---------- Stats ---------- */
+
+  .stats {
+    width: 90%;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-card {
+    min-height: 105px;
+
+    padding: 15px 8px;
+  }
+
+  .stats-card h3 {
+    font-size: 23px;
+  }
+
+  .stats-card span {
+    font-size: 11px;
+  }
+
+  /* ---------- Common title ---------- */
+
+  .section-title {
+    margin-bottom: 25px;
+  }
+
+  .section-title h3 {
+    font-size: 25px;
+  }
+
+  /* ---------- Programs ---------- */
+
+  .programs {
+    width: 90%;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+  }
+
+  .programs-card img {
+    height: 130px;
+  }
+
+  .programs-card h4 {
+    font-size: 14px;
+
+    margin-top: 12px;
+  }
+
+  .programs-card span {
+    font-size: 11px;
 
     line-height: 1.8;
+
+    margin-bottom: 14px;
+  }
+
+  /* ---------- Trainers ---------- */
+
+  .trainers-card {
+    padding: 12px;
+
+    gap: 12px;
+  }
+
+  .trainers-card img {
+    width: 95px;
+    height: 120px;
+  }
+
+  .trainers-card h4 {
+    font-size: 15px;
+  }
+
+  .trainers-card span {
+    font-size: 11px;
+  }
+
+  /* ---------- Gallery ---------- */
+
+  .gallery {
+    width: 90%;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-card {
+    height: 135px;
+  }
+
+  .gallery-card span {
+    right: 10px;
+    bottom: 10px;
+
+    font-size: 12px;
+  }
+
+  /* ---------- Pricing ---------- */
+
+  .pricing-card {
+    padding: 25px 18px;
+  }
+
+  .pricing-card h3 {
+    font-size: 28px;
+  }
+
+  /* ---------- Consultation ---------- */
+
+  .consultation-content h2 {
+    font-size: 22px;
+  }
+
+  .consultation-content > p {
+    font-size: 13px;
+
+    line-height: 1.9;
+  }
+
+  /* ---------- Footer ---------- */
+
+  .footer-container {
+    width: 90%;
+  }
+}
+
+/* =========================================================
+   15. VERY SMALL PHONES
+   400px
+   ========================================================= */
+
+@media (max-width: 400px) {
+  .navbar-content {
+    gap: 8px;
+  }
+
+  .navbar-content a {
+    font-size: 11px;
+  }
+
+  .hero {
+    min-height: 690px;
+
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .stats {
+    width: 92%;
+  }
+
+  .stats-card h3 {
+    font-size: 21px;
+  }
+
+  .programs {
+    width: 92%;
+  }
+
+  .gallery {
+    width: 92%;
+  }
+}
+
+/* =========================================================
+   16. ULTRA SMALL PHONES
+   360px
+   ========================================================= */
+
+@media (max-width: 360px) {
+  .navbar-content a {
+    font-size: 10px;
+  }
+
+  .navbar-content {
+    gap: 5px;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-content p {
+    font-size: 13px;
+  }
+
+  .stats-card h3 {
+    font-size: 19px;
+  }
+
+  .stats-card span {
+    font-size: 10px;
   }
 }
