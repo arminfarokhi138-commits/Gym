@@ -1,670 +1,1023 @@
 <!doctype html>
-<html lang="fa" dir="rtl">
+<html dir="rtl" lang="fa">
   <head>
+    <title>WebNeshan</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>باشگاه قدرت پلاس | Power Plus Gym</title>
-
-    <meta
-      name="description"
-      content="باشگاه بدنسازی قدرت پلاس؛ تمرین حرفه‌ای، مربیان متخصص و تجهیزات مدرن."
-    />
-
+    <meta name="viewport" content="width=device-width , initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/light/style.css"
+    />
+    <script src="script.js" defer></script>
   </head>
-
   <body>
-    <!-- =====================================================
-         HEADER / NAVBAR
-    ====================================================== -->
-
-    <header class="header">
-      <nav class="navbar">
+    <header>
+      <section class="navbar" id="navbar">
         <div class="logo">
-          <a href="#home" aria-label="صفحه اصلی قدرت پلاس">
-            <img src="logo.png" alt="لوگوی باشگاه قدرت پلاس" />
-          </a>
+          <img class="logo-img" src="logo.webp" />
         </div>
-
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-label="باز کردن منو"
-          aria-expanded="false"
-          aria-controls="main-menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <ul class="navbar-content" id="main-menu">
-          <li>
-            <a href="#home" class="nav-link active"> خانه </a>
-          </li>
-
-          <li>
-            <a href="#programs" class="nav-link"> برنامه‌ها </a>
-          </li>
-
-          <li>
-            <a href="#trainers" class="nav-link"> مربیان </a>
-          </li>
-
-          <li>
-            <a href="#gallery" class="nav-link"> گالری </a>
-          </li>
-
-          <li>
-            <a href="#membership" class="nav-link"> عضویت </a>
-          </li>
-
-          <li>
-            <a href="#contact" class="nav-link"> تماس </a>
-          </li>
-        </ul>
-
-        <a href="#contact" class="btn navbar-btn"> شروع تمرین </a>
-      </nav>
+        <div class="navbar-content">
+          <ul>
+            <li><a href="#portfolio">نمونه کار ها</a></li>
+            <li><a href="#services">خدمات ما</a></li>
+            <li><a href="#process">فرایند همکاری</a></li>
+            <li><a href="#about-us">درباره ما</a></li>
+            <li><a href="#contact">تماس</a></li>
+          </ul>
+        </div>
+        <div class="navbar-btn">
+          <a href="#contact" class="btn">شروع یک پروژه</a>
+        </div>
+      </section>
     </header>
-
-    <main>
-      <!-- =====================================================
-           HERO
-      ====================================================== -->
-
-      <section class="hero" id="home">
-        <img src="hero.png" alt="باشگاه بدنسازی قدرت پلاس" class="hero-bg" />
-
-        <div class="hero-overlay"></div>
-
-        <div class="hero-container">
-          <div class="hero-content">
-            <span class="hero-subtitle"> باشگاه بدنسازی قدرت پلاس </span>
-
-            <h1>
-              قوی‌تر از
-              <span>دیروز باش</span>
-            </h1>
-
-            <p>
-              تمرین حرفه‌ای، تجهیزات مدرن و مربیانی که تو را به بهترین نسخه خودت
-              تبدیل می‌کنند.
-            </p>
-
-            <div class="hero-button">
-              <a href="#contact" class="btn"> شروع تمرین </a>
-
-              <a href="#membership" class="btn-outline"> مشاهده برنامه‌ها </a>
-            </div>
+    <section class="hero" id="hero">
+      <img src="HERO.webp" alt="" class="hero-img" />
+      <div class="hero-overlay"></div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1>
+            وبسایتی که فقط زیبا نیست
+            <span> وبسایتی که برای توسعه کسب و کار شما ساخته می شود</span>
+          </h1>
+          <p>
+            طراحی و توسعه وب سایت های مدرن سریع و دقیق برای کسب و کار هایی
+            که می خواهند حرفه ای تر دیده شوند و مشتری جذب کنند
+          </p>
+          <div class="hero-button">
+            <a href="#contact" class="btn">مشاوره رایگان</a>
+            <a href="#portfolio" class="btn-outline">مشاهده نمونه کارها</a>
+          </div>
+          <div class="hero-icon">
+            <i class="ph-light ph-pencil"></i>
+            <h4>تجربه کاربردی عالی</h4>
+            <span>طراحی برای نتیجه</span>
+          </div>
+          <div class="hero-icon">
+            <i class="ph-light ph-devices"></i>
+            <h4>دسترسی راحت و سریع</h4>
+            <span>موبایل تبلت دسکتاپ</span>
+          </div>
+          <div class="hero-icon">
+            <i class="ph-light ph-package"></i>
+            <h4>تحویل آنلاین</h4>
+            <span>راه اندازی و به کارگیری</span>
+          </div>
+          <div class="hero-icon">
+            <i class="ph-light ph-palette"></i>
+            <h4>طراحی اختصاصی</h4>
+            <span>متناسب با برند شما</span>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="services" id="services">
+      <div class="services-title">
+        <h5>خدمات ما</h5>
+      </div>
+      <div class="services-container">
+        <h2>کامل ترین خدمات برای حضور آنلاین حرفه ای</h2>
+        <p>
+          از ایده تا انتشار همراه شما هستیم تا بهترین نسخه دیجیتال کسب و کار تان
+          را بسازیم
+        </p>
+      </div>
+      <div class="services-card">
+        <i class="ph-light ph-pencil"></i>
+        <h4>طراحی سایت</h4>
+        <span>طراحی اختصاصی متناسب با برند و مخاطب</span>
+      </div>
+      <div class="services-card">
+        <i class="ph-light ph-laptop"></i>
+        <h4>توسعه وب</h4>
+        <span>تبدیل طراحی به سایت سریع و Responsive</span>
+      </div>
+      <div class="services-card">
+        <i class="ph-light ph-rocket-launch"></i>
+        <h4>صفحه فرود</h4>
+        <span>صفحات فرود برای کمپین ها و جذب مشتری</span>
+      </div>
+      <div class="services-card">
+        <i class="ph-light ph-headset"></i>
+        <h4>پشتیبانی و توسعه</h4>
+        <span>رفع خطا تغییرات و توسعه امکانات پس از تحویل</span>
+      </div>
+    </section>
+    <!-- =========================
+     PORTFOLIO
+========================= -->
+<!-- =========================================================
+     PORTFOLIO / SELECTED WORK
+========================================================= -->
+<section class="portfolio" id="portfolio">
+
+  <div class="portfolio-header">
+
+    <div class="portfolio-section-label">
+      <span></span>
+      نمونه کارها
+    </div>
+
+    <h2 class="portfolio-title">
+      پروژه‌های <span>منتخب</span>
+    </h2>
+
+    <p class="portfolio-intro">
+      مجموعه‌ای از پروژه‌های مفهومی که برای نمایش توانایی WebNeshan
+      در طراحی و توسعه تجربه‌های مدرن وب ساخته شده‌اند.
+    </p>
+
+  </div>
+
+
+  <div class="portfolio-grid">
+
+
+    <!-- =====================================================
+         PROJECT 01 - FIRE GRILL
+    ====================================================== -->
+    <article class="portfolio-card">
+
+      <a
+        href="https://restaurant-rho-ruby.vercel.app/"
+        class="portfolio-image-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="مشاهده پروژه فایر گریل"
+      >
+        <div class="portfolio-image-wrapper">
+
+          <img
+            src="firegrill.webp"
+            alt="پیش‌نمایش وب‌سایت فایر گریل"
+            loading="lazy"
+          />
+
+          <span class="portfolio-image-overlay">
+            مشاهده پروژه
+            <i class="ph-light ph-arrow-up-left"></i>
+          </span>
+
+        </div>
+      </a>
+
+
+      <div class="portfolio-card-content">
+
+        <div class="portfolio-card-top">
+
+          <span class="portfolio-number">
+            01
+          </span>
+
+          <span class="portfolio-category">
+            رستوران
+          </span>
+
+        </div>
+
+
+        <h3 class="portfolio-card-title">
+          Fire Grill
+        </h3>
+
+
+        <p class="portfolio-card-description">
+          یک تجربه وب مدرن برای یک رستوران با تمرکز بر معرفی منو،
+          فضای برند، نمایش غذاها و ایجاد مسیر ساده برای رزرو.
+        </p>
+
+
+        <div class="portfolio-tags">
+
+          <span>طراحی رابط کاربری</span>
+          <span>Responsive</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+
+        </div>
+
 
         <a
-          href="#programs"
-          class="hero-scroll"
-          aria-label="رفتن به بخش برنامه‌ها"
+          href="https://restaurant-rho-ruby.vercel.app/"
+          class="portfolio-project-btn"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <span class="scroll-mouse"></span>
-          <span>اسکرول کنید</span>
+          مشاهده پروژه
+          <i class="ph-light ph-arrow-up-left"></i>
         </a>
-      </section>
 
-      <!-- =====================================================
-           STATS
-      ====================================================== -->
+      </div>
 
-      <section class="stats" aria-label="آمار باشگاه">
-        <div class="stats-card reveal">
-          <h3 class="counter" data-target="250" data-suffix="+">0</h3>
+    </article>
 
-          <span> عضو فعال </span>
+
+
+    <!-- =====================================================
+         PROJECT 02 - WHITE SMILE
+    ====================================================== -->
+    <article class="portfolio-card">
+
+      <a
+        href="https://white-smile-alpha.vercel.app/"
+        class="portfolio-image-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="مشاهده پروژه White Smile"
+      >
+        <div class="portfolio-image-wrapper">
+
+          <img
+            src="clink.webp"
+            alt="پیش‌نمایش وب‌سایت کلینیک دندانپزشکی White Smile"
+            loading="lazy"
+          />
+
+          <span class="portfolio-image-overlay">
+            مشاهده پروژه
+            <i class="ph-light ph-arrow-up-left"></i>
+          </span>
+
+        </div>
+      </a>
+
+
+      <div class="portfolio-card-content">
+
+        <div class="portfolio-card-top">
+
+          <span class="portfolio-number">
+            02
+          </span>
+
+          <span class="portfolio-category">
+            کلینیک دندانپزشکی
+          </span>
+
         </div>
 
-        <div class="stats-card reveal">
-          <h3 class="counter" data-target="15">0</h3>
 
-          <span> مربی حرفه‌ای </span>
+        <h3 class="portfolio-card-title">
+          White Smile
+        </h3>
+
+
+        <p class="portfolio-card-description">
+          طراحی یک وب‌سایت حرفه‌ای برای معرفی خدمات کلینیک،
+          متخصصان و ایجاد یک مسیر ساده و واضح برای دریافت نوبت.
+        </p>
+
+
+        <div class="portfolio-tags">
+
+          <span>UI/UX</span>
+          <span>Responsive</span>
+          <span>نوبت‌دهی</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+
         </div>
 
-        <div class="stats-card reveal">
-          <h3 class="counter" data-target="8">0</h3>
 
-          <span> سال تجربه </span>
+        <a
+          href="https://white-smile-alpha.vercel.app/"
+          class="portfolio-project-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          مشاهده پروژه
+          <i class="ph-light ph-arrow-up-left"></i>
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- =====================================================
+         PROJECT 03 - QUDRAT PLUS
+    ====================================================== -->
+    <article class="portfolio-card">
+
+      <a
+        href="https://gym-wine-sigma.vercel.app/"
+        class="portfolio-image-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="مشاهده پروژه Qudrat Plus"
+      >
+        <div class="portfolio-image-wrapper">
+
+          <img
+            src="gym.webp"
+            alt="پیش‌نمایش وب‌سایت باشگاه ورزشی Qudrat Plus"
+            loading="lazy"
+          />
+
+          <span class="portfolio-image-overlay">
+            مشاهده پروژه
+            <i class="ph-light ph-arrow-up-left"></i>
+          </span>
+
+        </div>
+      </a>
+
+
+      <div class="portfolio-card-content">
+
+        <div class="portfolio-card-top">
+
+          <span class="portfolio-number">
+            03
+          </span>
+
+          <span class="portfolio-category">
+            باشگاه ورزشی
+          </span>
+
         </div>
 
-        <div class="stats-card reveal">
-          <h3 class="counter" data-target="24" data-suffix="/7">0</h3>
 
-          <span> سرویس‌دهی </span>
-        </div>
-      </section>
+        <h3 class="portfolio-card-title">
+          Qudrat Plus
+        </h3>
 
-      <!-- =====================================================
-           PROGRAMS
-      ====================================================== -->
 
-      <section class="programs section-space" id="programs">
-        <div class="section-title reveal">
-          <span> مسیر مناسب خودت را پیدا کن </span>
+        <p class="portfolio-card-description">
+          یک تجربه پویا برای معرفی برنامه‌های تمرینی،
+          امکانات باشگاه و پلن‌های عضویت با ساختاری واضح و مدرن.
+        </p>
 
-          <h2>برنامه‌های تمرینی</h2>
 
-          <p>
-            با توجه به هدف و سطح آمادگی بدنی خودت، بهترین مسیر تمرینی را انتخاب
-            کن.
-          </p>
-        </div>
+        <div class="portfolio-tags">
 
-        <div class="programs-grid">
-          <article class="programs-card reveal">
-            <div class="card-image">
-              <img src="02-CrossFit.jpg" alt="تمرین کراس فیت" loading="lazy" />
-            </div>
+          <span>UI/UX</span>
+          <span>Responsive</span>
+          <span>عضویت</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
 
-            <div class="program-card-content">
-              <h3>کراس فیت</h3>
-
-              <p>قدرت، استقامت و سرعت</p>
-
-              <a href="#contact">
-                مشاهده بیشتر
-                <span>←</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="programs-card reveal">
-            <div class="card-image">
-              <img src="03-Fitness.jpg" alt="تمرین تی آر ایکس" loading="lazy" />
-            </div>
-
-            <div class="program-card-content">
-              <h3>تی آر ایکس</h3>
-
-              <p>تناسب اندام و سلامت عمومی</p>
-
-              <a href="#contact">
-                مشاهده بیشتر
-                <span>←</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="programs-card reveal">
-            <div class="card-image">
-              <img src="04-FatLoss.jpg" alt="تمرین فیتنس" loading="lazy" />
-            </div>
-
-            <div class="program-card-content">
-              <h3>فیتنس</h3>
-
-              <p>کنترل وزن و فرم‌دهی بدن</p>
-
-              <a href="#contact">
-                مشاهده بیشتر
-                <span>←</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="programs-card reveal">
-            <div class="card-image">
-              <img
-                src="05-Bodybuilding.jpg"
-                alt="تمرین بدنسازی"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="program-card-content">
-              <h3>بدنسازی</h3>
-
-              <p>افزایش قدرت و حجم عضلات</p>
-
-              <a href="#contact">
-                مشاهده بیشتر
-                <span>←</span>
-              </a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- =====================================================
-           TRAINERS
-      ====================================================== -->
-
-      <section class="trainers section-space" id="trainers">
-        <div class="section-title reveal">
-          <span> تیم حرفه‌ای قدرت پلاس </span>
-
-          <h2>مربیان حرفه‌ای ما</h2>
-
-          <p>با کمک مربیان متخصص، تمریناتت را اصولی‌تر و هدفمندتر دنبال کن.</p>
         </div>
 
-        <div class="trainers-grid">
-          <article class="trainers-card reveal">
-            <img src="06-Coach-Reza.jpg" alt="مربی بدنسازی" loading="lazy" />
 
-            <div class="trainer-info">
-              <span class="trainer-role"> مربی بدنسازی </span>
+        <a
+          href="https://gym-wine-sigma.vercel.app/"
+          class="portfolio-project-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          مشاهده پروژه
+          <i class="ph-light ph-arrow-up-left"></i>
+        </a>
 
-              <h3>علی رضایی</h3>
+      </div>
 
-              <p>تخصص در عضله‌سازی و افزایش قدرت</p>
-            </div>
-          </article>
+    </article>
 
-          <article class="trainers-card reveal">
-            <img src="07-Coach-Amin.jpg" alt="مربی کراس فیت" loading="lazy" />
+  </div>
 
-            <div class="trainer-info">
-              <span class="trainer-role"> مربی کراس فیت </span>
+</section>
 
-              <h3>محمد کریمی</h3>
 
-              <p>تخصص در تمرینات عملکردی و استقامتی</p>
-            </div>
-          </article>
 
-          <article class="trainers-card reveal">
-            <img src="08-Coach-Ali.jpg" alt="مربی فیتنس" loading="lazy" />
+<!-- =========================================================
+     FEATURED PROJECT / CASE STUDY
+========================================================= -->
+<section class="case-study" id="case-study">
 
-            <div class="trainer-info">
-              <span class="trainer-role"> مربی فیتنس </span>
+  <div class="case-study-container">
 
-              <h3>سارا احمدی</h3>
 
-              <p>تخصص در فرم‌دهی و تناسب اندام</p>
-            </div>
-          </article>
-        </div>
-      </section>
+    <!-- IMAGE -->
+    <div class="case-study-media">
 
-      <!-- =====================================================
-           GALLERY
-      ====================================================== -->
+      <div class="case-study-glow"></div>
 
-      <section class="gallery section-space" id="gallery">
-        <div class="section-title reveal">
-          <span> قدرت پلاس را از نزدیک ببین </span>
+      <div class="case-study-image-frame">
 
-          <h2>فضای قدرت پلاس</h2>
+        <img
+          src="Royal.webp"
+          alt="پیش‌نمایش پروژه مفهومی Royal Beauty"
+          class="case-study-image"
+          loading="lazy"
+        />
 
-          <p>جایی برای ساختن نسخه قوی‌تر خودت</p>
-        </div>
+      </div>
 
-        <div class="gallery-grid">
-          <button
-            class="gallery-card gallery-large reveal"
-            type="button"
-            data-image="09-Gallery-01.jpg"
-            data-title="سالن وزنه"
-          >
-            <img src="09-Gallery-01.jpg" alt="سالن وزنه" loading="lazy" />
+    </div>
 
-            <span> سالن وزنه </span>
-          </button>
 
-          <button
-            class="gallery-card reveal"
-            type="button"
-            data-image="10-Gallery-02.jpg"
-            data-title="سالن کاردیو"
-          >
-            <img src="10-Gallery-02.jpg" alt="سالن کاردیو" loading="lazy" />
 
-            <span> سالن کاردیو </span>
-          </button>
+    <!-- CONTENT -->
+    <div class="case-study-content">
 
-          <button
-            class="gallery-card reveal"
-            type="button"
-            data-image="11-Gallery-03.jpg"
-            data-title="سالن کراس فیت"
-          >
-            <img src="11-Gallery-03.jpg" alt="سالن کراس فیت" loading="lazy" />
+      <div class="case-study-label">
+        <span></span>
+        پروژه منتخب
+      </div>
 
-            <span> سالن کراس فیت </span>
-          </button>
 
-          <button
-            class="gallery-card gallery-wide reveal"
-            type="button"
-            data-image="12-Gallery-04.jpg"
-            data-title="فضای باشگاه"
-          >
-            <img src="12-Gallery-04.jpg" alt="فضای باشگاه" loading="lazy" />
+      <div class="case-study-badge">
+        پروژه مفهومی
+      </div>
 
-            <span> فضای باشگاه </span>
-          </button>
-        </div>
-      </section>
 
-      <!-- =====================================================
-           PRICING
-      ====================================================== -->
+      <h2 class="case-study-title">
+        Royal Beauty
+      </h2>
 
-      <section class="pricing section-space" id="membership">
-        <div class="section-title reveal">
-          <span> عضویت در قدرت پلاس </span>
 
-          <h2>پلن‌های عضویت</h2>
+      <h3 class="case-study-subtitle">
+        طراحی و توسعه وب‌سایت سالن زیبایی
+      </h3>
 
-          <p>پلنی را انتخاب کن که با هدف و سبک تمرینت هماهنگ باشد.</p>
-        </div>
 
-        <div class="pricing-grid">
-          <!-- MONTHLY -->
+      <p class="case-study-description">
+        یک پروژه مفهومی برای طراحی تجربه‌ای مدرن و لوکس
+        برای یک سالن زیبایی؛ با تمرکز بر معرفی خدمات،
+        نمایش نمونه‌کارها و ایجاد یک مسیر ساده برای رزرو نوبت.
+      </p>
 
-          <article class="pricing-card reveal">
-            <div class="pricing-top">
-              <h3>ماهیانه</h3>
 
-              <span> مناسب شروع </span>
-            </div>
 
-            <div class="price">
-              <strong> 890,000 </strong>
+      <!-- PROJECT INFO -->
+      <div class="case-study-info-grid">
 
-              <span> تومان / ماه </span>
-            </div>
 
-            <ul>
-              <li>دسترسی به سالن بدنسازی</li>
+        <div class="case-study-info-card">
 
-              <li>برنامه تمرینی</li>
+          <div class="case-study-info-icon">
+            <i class="ph-light ph-target"></i>
+          </div>
 
-              <li>مشاوره اولیه</li>
-            </ul>
-
-            <a href="#contact" class="pricing-btn"> ثبت نام </a>
-          </article>
-
-          <!-- THREE MONTH -->
-
-          <article class="pricing-card popular reveal">
-            <div class="popular-badge">محبوب‌ترین انتخاب</div>
-
-            <div class="pricing-top">
-              <h3>سه ماهه</h3>
-
-              <span> انتخاب هوشمندانه </span>
-            </div>
-
-            <div class="price">
-              <strong> 2,400,000 </strong>
-
-              <span> تومان / ۳ ماه </span>
-            </div>
-
-            <ul>
-              <li>دسترسی به تمامی سالن‌ها</li>
-
-              <li>برنامه تمرینی اختصاصی</li>
-
-              <li>مشاوره اولیه</li>
-
-              <li>پشتیبانی تمرینی</li>
-            </ul>
-
-            <a href="#contact" class="pricing-btn"> ثبت نام </a>
-          </article>
-
-          <!-- VIP -->
-
-          <article class="pricing-card vip reveal">
-            <div class="vip-badge">VIP</div>
-
-            <div class="pricing-top">
-              <h3>سالانه VIP</h3>
-
-              <span> کامل‌ترین پلن </span>
-            </div>
-
-            <div class="price">
-              <strong> 8,900,000 </strong>
-
-              <span> تومان / سال </span>
-            </div>
-
-            <ul>
-              <li>دسترسی به تمامی سالن‌ها</li>
-
-              <li>برنامه تمرینی اختصاصی</li>
-
-              <li>مربی اختصاصی</li>
-
-              <li>آنالیز بدن ماهانه</li>
-            </ul>
-
-            <a href="#contact" class="pricing-btn"> ثبت نام VIP </a>
-          </article>
-        </div>
-      </section>
-
-      <!-- =====================================================
-           CONSULTATION
-      ====================================================== -->
-
-      <section class="consultation" id="contact">
-        <div class="consultation-content reveal">
-          <div class="consultation-heading">
-            <span> اولین قدم را همین امروز بردار </span>
-
-            <h2>مشاوره رایگان دریافت کن</h2>
+          <div>
+            <h4>هدف پروژه</h4>
 
             <p>
-              فرم زیر را پر کنید تا کارشناسان ما برای راهنمایی بیشتر با شما تماس
-              بگیرند.
+              ایجاد یک تجربه وب منسجم برای معرفی خدمات
+              و هویت بصری یک برند زیبایی.
             </p>
           </div>
 
-          <form class="consultation-form" id="consultationForm" novalidate>
-            <div class="form-group">
-              <label for="name"> نام و نام خانوادگی </label>
-
-              <input
-                id="name"
-                name="name"
-                type="text"
-                placeholder="مثلاً علی رضایی"
-                autocomplete="name"
-                required
-              />
-
-              <small class="form-error"></small>
-            </div>
-
-            <div class="form-group">
-              <label for="phone"> شماره تماس </label>
-
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                inputmode="tel"
-                placeholder="مثلاً 09121234567"
-                autocomplete="tel"
-                required
-              />
-
-              <small class="form-error"></small>
-            </div>
-
-            <div class="form-group full">
-              <label for="goal"> هدف شما </label>
-
-              <select id="goal" name="goal" required>
-                <option value="">هدف تمرینی خود را انتخاب کنید</option>
-
-                <option value="bodybuilding">بدنسازی</option>
-
-                <option value="crossfit">کراس فیت</option>
-
-                <option value="trx">تی آر ایکس</option>
-
-                <option value="fitness">فیتنس</option>
-
-                <option value="fatloss">چربی‌سوزی</option>
-              </select>
-
-              <small class="form-error"></small>
-            </div>
-
-            <button type="submit" class="btn consultation-submit">
-              دریافت مشاوره
-            </button>
-          </form>
-
-          <div class="form-success" id="formSuccess" role="status">
-            درخواست شما با موفقیت ثبت شد. کارشناسان ما به‌زودی با شما تماس
-            می‌گیرند.
-          </div>
         </div>
-      </section>
-    </main>
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
 
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-grid">
-          <!-- BRAND -->
 
-          <div class="footer-brand">
-            <a href="#home">
-              <img
-                src="logo.png"
-                alt="لوگوی باشگاه قدرت پلاس"
-                class="footer-logo"
-              />
+        <div class="case-study-info-card">
+
+          <div class="case-study-info-icon">
+            <i class="ph-light ph-palette"></i>
+          </div>
+
+          <div>
+            <h4>رویکرد طراحی</h4>
+
+            <p>
+              ترکیب فضای مینیمال، تصاویر بزرگ،
+              سلسله‌مراتب بصری و جزئیات ظریف.
+            </p>
+          </div>
+
+        </div>
+
+
+
+        <div class="case-study-info-card">
+
+          <div class="case-study-info-icon">
+            <i class="ph-light ph-user-circle"></i>
+          </div>
+
+          <div>
+            <h4>تجربه کاربری</h4>
+
+            <p>
+              دسترسی سریع به خدمات، نمونه‌کارها
+              و مسیر ساده برای رزرو.
+            </p>
+          </div>
+
+        </div>
+
+
+
+        <div class="case-study-info-card">
+
+          <div class="case-study-info-icon">
+            <i class="ph-light ph-device-mobile"></i>
+          </div>
+
+          <div>
+            <h4>Responsive</h4>
+
+            <p>
+              طراحی و توسعه برای نمایش صحیح
+              در موبایل، تبلت و دسکتاپ.
+            </p>
+          </div>
+
+        </div>
+
+
+
+        <div class="case-study-info-card">
+
+          <div class="case-study-info-icon">
+            <i class="ph-light ph-code"></i>
+          </div>
+
+          <div>
+            <h4>تکنولوژی</h4>
+
+            <p>
+              HTML، CSS و JavaScript
+              با ساختار سبک و قابل توسعه.
+            </p>
+          </div>
+
+        </div>
+
+
+
+        <div class="case-study-info-card">
+
+          <div class="case-study-info-icon">
+            <i class="ph-light ph-sparkle"></i>
+          </div>
+
+          <div>
+            <h4>ویژگی‌های اصلی</h4>
+
+            <p>
+              معرفی خدمات، گالری، معرفی تیم،
+              نظرات، فرم رزرو و طراحی Responsive.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- TAGS -->
+      <div class="case-study-tags">
+
+        <span>Web Development</span>
+        <span>UI/UX Design</span>
+        <span>Responsive</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+
+      </div>
+
+
+
+      <!-- CTA -->
+      <div class="case-study-actions">
+
+        <a
+          href="https://beauty-salon-three-zeta.vercel.app/"
+          class="case-study-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          مشاهده جزئیات پروژه
+
+          <i class="ph-light ph-arrow-up-left"></i>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+    <section class="process" id="process">
+      <div class="process-title">
+        <h3>فرایند همکاری</h3>
+      </div>
+      <div class="process-container">
+        <div class="process-card">
+          <i class="ph-light ph-chat-circle-dots"></i>
+          <h4>01 مشاوره</h4>
+          <p>نیاز کسب و کار را بررسی می کنیم.</p>
+        </div>
+        <div class="process-card">
+          <i class="ph-light ph-pencil-simple-line"></i>
+          <h4>02 طراحی</h4>
+          <p> طراحی بروز و اختصاصی</p>
+        </div>
+        <div class="process-card">
+          <i class="ph-light ph-code"></i>
+          <h4>03 توسعه</h4>
+          <p>سایت پیاده سازی می شود</p>
+        </div>
+        <div class="process-card">
+          <i class="ph-light ph-cloud-arrow-up"></i>
+          <h4>04 انتشار</h4>
+          <p>انتشار سایت روی سرور</p>
+        </div>
+        <div class="process-card">
+          <i class="ph-light ph-headset"></i>
+          <h4>05 پشتیبانی</h4>
+          <p>بعد از تحویل در صورت انتخاب پلن پشتیبانی همراه با شما هستیم</p>
+        </div>
+      </div>
+    </section>
+    <section class="about-us" id="about-us">
+      <div class="about-us-container">
+        <div class="about-team">
+          <div class="section-title">
+        <h5>درباره ما</h5>
+      </div>
+      <p>ما یک تیم در حوزه طراحی و توسعه وب هستیم که روی ساخت تجربه 
+        های دیجیتال مدرن برای کسب و کار ها تمرکز داریم.
+      </p>
+        </div>
+        <div class="about-us-cta">
+
+  <h2>
+    آماده‌اید حضور آنلاین کسب‌وکارتان را ارتقا دهید؟
+  </h2>
+
+  <p>
+    برای دریافت مشاوره رایگان و شروع پروژه‌تان،
+    از راه‌های زیر با ما در ارتباط باشید.
+  </p>
+
+  <a href="#contact" class="btn-2">
+    درخواست مشاوره
+    <i class="ph-light ph-arrow-left"></i>
+  </a>
+
+  <div class="about-contact-list">
+
+    <a href="https://wa.me/989912310412"
+       class="about-contact-item"
+       target="_blank"
+       rel="noopener noreferrer">
+
+      <span class="about-contact-icon">
+        <i class="ph-light ph-whatsapp-logo"></i>
+      </span>
+
+      <span class="about-contact-text">
+        <strong>واتساپ</strong>
+        <span dir="ltr">09216584239</span>
+      </span>
+
+    </a>
+
+    <a href="webneshan1@gmail.com"
+       class="about-contact-item">
+
+      <span class="about-contact-icon">
+        <i class="ph-light ph-envelope"></i>
+      </span>
+
+      <span class="about-contact-text">
+        <strong>ایمیل</strong>
+        <span>webneshan1@gmail.com</span>
+      </span>
+
+    </a>
+
+  </div>
+
+</div>
+      </div>
+    </section>
+    <section class="faq" id="faq">
+       <div class="section-title">
+    <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">
+              <i class="ph-light ph-question"></i>
+                <b><span>طراحی و توسعه یک وب‌سایت چقدر زمان می‌برد؟</span></b>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    زمان اجرای پروژه به نوع وب‌سایت، تعداد صفحات و امکانات موردنیاز
+                    بستگی دارد. پس از بررسی نیازهای پروژه، زمان تقریبی اجرا اعلام می‌شود.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+              <i class="ph-light ph-question"></i>
+                <b><span>آیا وب‌سایت‌ها Responsive هستند؟</span></b>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    بله. تمام وب‌سایت‌ها برای نمایش صحیح در موبایل، تبلت و دسکتاپ
+                    طراحی و توسعه می‌شوند.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+              <i class="ph-light ph-question"></i>
+                <b><span>آیا طراحی سایت اختصاصی انجام می‌دهید؟</span></b>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    بله. طراحی رابط کاربری بر اساس نیاز، نوع کسب‌وکار و مخاطبان
+                    هر پروژه انجام می‌شود و از قالب‌های تکراری استفاده نمی‌کنیم.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+              <i class="ph-light ph-question"></i>
+                <b><span>بعد از تحویل سایت پشتیبانی هم دارید؟</span></b>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    بله. پس از تحویل پروژه، امکان دریافت خدمات پشتیبانی،
+                    رفع خطا و توسعه امکانات جدید وجود دارد.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+              <i class="ph-light ph-question"></i>
+                <b><span>آیا دامنه و هاست را هم تهیه و تنظیم می‌کنید؟</span></b>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    در صورت نیاز، در انتخاب، تهیه و تنظیم دامنه و هاست مناسب
+                    برای پروژه نیز به شما کمک می‌کنیم.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+              <i class="ph-light ph-question"></i>
+                <b><span>چطور می‌توانم پروژه خودم را شروع کنم؟</span></b>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    کافی است از طریق بخش تماس یا دکمه «شروع یک پروژه» با ما
+                    ارتباط بگیرید تا درباره نیازها و اهداف پروژه صحبت کنیم.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<section class="contact" id="contact">
+
+  <div class="contact-container">
+
+    <div class="contact-content">
+
+      <span class="contact-label">
+        تماس با ما
+      </span>
+
+      <h2>
+        آماده‌ای پروژه بعدی
+        <span>تو رو شروع کنیم؟</span>
+      </h2>
+
+      <p>
+        اگر برای کسب و کارت به یک وب سایت مدرن، سریع و دقیق نیاز داری،
+        خوشحال می‌شیم درباره پروژه‌ات با هم صحبت کنیم.
+      </p>
+
+      <div class="contact-info">
+
+        <a href="webneshan1@gmail.com" class="contact-item">
+
+          <i class="ph-light ph-envelope-simple"></i>
+
+          <div>
+            <span>ایمیل</span>
+            <strong>webneshan1@gmail.com</strong>
+          </div>
+
+        </a>
+
+        <a href="tel:+989912310412" class="contact-item">
+
+          <i class="ph-light ph-phone"></i>
+
+          <div>
+            <span>تلفن</span>
+            <strong>09912310412</strong>
+          </div>
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="contact-card">
+
+      <div class="contact-card-icon">
+        <i class="ph-light ph-paper-plane-tilt"></i>
+      </div>
+
+      <h3>
+        شروع یک پروژه جدید
+      </h3>
+
+      <p>
+        جزئیات پروژه‌ات رو برامون بفرست تا درباره مسیر اجرا و هزینه با هم صحبت کنیم.
+      </p>
+
+      <a
+        href="mailto:webneshan1@gmail.com"
+        class="contact-btn"
+      >
+        ارسال درخواست پروژه
+
+        <i class="ph-light ph-arrow-left"></i>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+
+            <a href="#" class="footer-logo">
+                WEBNESHAN
             </a>
 
             <p>
-              ما اینجا هستیم تا به تو کمک کنیم قوی‌تر، سالم‌تر و حرفه‌ای‌تر از
-              همیشه باشی.
+                طراحی و توسعه وب‌سایت‌های مدرن، سریع و حرفه‌ای
+                برای کسب‌وکارهایی که می‌خواهند بهتر دیده شوند.
             </p>
-          </div>
 
-          <!-- QUICK LINKS -->
+            <div class="footer-socials">
 
-          <div class="footer-column">
-            <h3>دسترسی سریع</h3>
+                <a href="#" aria-label="Instagram">
+                    Instagram
+                </a>
 
-            <ul>
-              <li>
-                <a href="#home"> خانه </a>
-              </li>
+                <a href="#" aria-label="LinkedIn">
+                    LinkedIn
+                </a>
 
-              <li>
-                <a href="#programs"> برنامه‌ها </a>
-              </li>
+                <a href="#" aria-label="WhatsApp">
+                    WhatsApp
+                </a>
 
-              <li>
-                <a href="#trainers"> مربیان </a>
-              </li>
-
-              <li>
-                <a href="#gallery"> گالری </a>
-              </li>
-
-              <li>
-                <a href="#membership"> عضویت </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- SERVICES -->
-
-          <div class="footer-column">
-            <h3>خدمات</h3>
-
-            <ul>
-              <li>
-                <a href="#programs"> بدنسازی </a>
-              </li>
-
-              <li>
-                <a href="#programs"> فیتنس </a>
-              </li>
-
-              <li>
-                <a href="#programs"> کراس فیت </a>
-              </li>
-
-              <li>
-                <a href="#programs"> چربی‌سوزی </a>
-              </li>
-
-              <li>
-                <a href="#contact"> مشاوره تخصصی </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- CONTACT -->
-
-          <div class="footer-contact">
-            <h3>اطلاعات تماس</h3>
-
-            <p>📞 ۰۲۱-۱۲۳۴۵۶۷۸</p>
-
-            <p>📍 تهران، خیابان ولیعصر، بالاتر از پارک ملت</p>
-
-            <p>✉ info@qudratplus.com</p>
-
-            <div class="footer-social">
-              <a href="#" aria-label="Instagram"> Instagram </a>
-
-              <a href="#" aria-label="WhatsApp"> WhatsApp </a>
-
-              <a href="#" aria-label="Telegram"> Telegram </a>
             </div>
-          </div>
+
         </div>
 
-        <div class="footer-bottom">
-          <p>© ۱۴۰۳ قدرت پلاس | تمامی حقوق محفوظ است.</p>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+
+            <h4>دسترسی سریع</h4>
+
+            <ul>
+                <li>
+                    <a href="#portfolio">نمونه‌کارها</a>
+                </li>
+
+                <li>
+                    <a href="#services">خدمات</a>
+                </li>
+
+                <li>
+                    <a href="#process">فرآیند همکاری</a>
+                </li>
+
+                <li>
+                    <a href="#about">درباره ما</a>
+                </li>
+
+                <li>
+                    <a href="#contact">تماس با ما</a>
+                </li>
+            </ul>
+
         </div>
-      </div>
-    </footer>
 
-    <!-- =====================================================
-         LIGHTBOX
-    ====================================================== -->
 
-    <div class="lightbox" id="lightbox" aria-hidden="true">
-      <button class="lightbox-close" type="button" aria-label="بستن">×</button>
+        <!-- Services -->
+        <div class="footer-column">
 
-      <button class="lightbox-prev" type="button" aria-label="تصویر قبلی">
-        →
-      </button>
+            <h4>خدمات</h4>
 
-      <div class="lightbox-content">
-        <img id="lightboxImage" src="" alt="" />
+            <ul>
+                <li>
+                    <a href="#services">طراحی سایت</a>
+                </li>
 
-        <p id="lightboxTitle"></p>
-      </div>
+                <li>
+                    <a href="#services">توسعه وب</a>
+                </li>
 
-      <button class="lightbox-next" type="button" aria-label="تصویر بعدی">
-        ←
-      </button>
+                <li>
+                    <a href="#services">Landing Page</a>
+                </li>
+
+                <li>
+                    <a href="#services">پشتیبانی و توسعه</a>
+                </li>
+            </ul>
+
+        </div>
+
+
+        <!-- Contact -->
+        <div class="footer-column footer-contact">
+
+            <h4>تماس با ما</h4>
+
+            <ul>
+
+                <li>
+                    <a href="tel:+989216584239">
+                        09216584239
+                    </a>
+                </li>
+
+                <li>
+                    <a href="mailto:webneshan1@gmail.com">
+                        webneshan1@gmail.com
+                    </a>
+                </li>
+
+                <li>
+                    <span>
+                        تهران، ایران
+                    </span>
+                </li>
+
+            </ul>
+
+            <a href="#contact" class="footer-cta">
+                شروع یک پروژه
+            </a>
+
+        </div>
+
     </div>
 
-    <script src="script.js"></script>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+
+        <p>
+            © ۱۴۰۵ WEBNESHAN — تمامی حقوق محفوظ است.
+        </p>
+
+        <div class="footer-bottom-links">
+
+            <a href="#">
+                حریم خصوصی
+            </a>
+
+            <a href="#">
+                شرایط استفاده
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
   </body>
 </html>
