@@ -1,338 +1,670 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
   <head>
-    <title>Gym</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>باشگاه قدرت پلاس | Power Plus Gym</title>
+
+    <meta
+      name="description"
+      content="باشگاه بدنسازی قدرت پلاس؛ تمرین حرفه‌ای، مربیان متخصص و تجهیزات مدرن."
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <header>
-      <section class="navbar">
+    <!-- =====================================================
+         HEADER / NAVBAR
+    ====================================================== -->
+
+    <header class="header">
+      <nav class="navbar">
         <div class="logo">
-          <a href="#">
-            <img src="logo.png" alt="لوگو " />
+          <a href="#home" aria-label="صفحه اصلی قدرت پلاس">
+            <img src="logo.png" alt="لوگوی باشگاه قدرت پلاس" />
           </a>
         </div>
-        <ul class="navbar-content">
-          <li><a href="#">خانه</a></li>
-          <li><a href="#">مربیان</a></li>
-          <li><a href="#">گالری</a></li>
-          <li><a href="#">عضویت</a></li>
-          <li><a href="#">تماس</a></li>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="باز کردن منو"
+          aria-expanded="false"
+          aria-controls="main-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="navbar-content" id="main-menu">
+          <li>
+            <a href="#home" class="nav-link active"> خانه </a>
+          </li>
+
+          <li>
+            <a href="#programs" class="nav-link"> برنامه‌ها </a>
+          </li>
+
+          <li>
+            <a href="#trainers" class="nav-link"> مربیان </a>
+          </li>
+
+          <li>
+            <a href="#gallery" class="nav-link"> گالری </a>
+          </li>
+
+          <li>
+            <a href="#membership" class="nav-link"> عضویت </a>
+          </li>
+
+          <li>
+            <a href="#contact" class="nav-link"> تماس </a>
+          </li>
         </ul>
-        <a href="#" class="btn">شروع تمرین</a>
-      </section>
+
+        <a href="#contact" class="btn navbar-btn"> شروع تمرین </a>
+      </nav>
     </header>
-    <section class="hero">
 
-    <img
-        src="hero.png"
-        alt="باشگاه بدنسازی قدرت پلاس"
-        class="hero-bg"
-    >
+    <main>
+      <!-- =====================================================
+           HERO
+      ====================================================== -->
 
-    <div class="hero-overlay"></div>
+      <section class="hero" id="home">
+        <img src="hero.png" alt="باشگاه بدنسازی قدرت پلاس" class="hero-bg" />
 
-    <div class="hero-container">
+        <div class="hero-overlay"></div>
 
-        <div class="hero-content">
-
-            <span class="hero-subtitle">
-                باشگاه بدنسازی قدرت پلاس
-            </span>
+        <div class="hero-container">
+          <div class="hero-content">
+            <span class="hero-subtitle"> باشگاه بدنسازی قدرت پلاس </span>
 
             <h1>
-                قوی‌تر از
-                <span>دیروز باش</span>
+              قوی‌تر از
+              <span>دیروز باش</span>
             </h1>
 
             <p>
-                تمرین حرفه‌ای، تجهیزات مدرن و مربیانی که
-                تو را به بهترین نسخه خودت تبدیل می‌کنند.
+              تمرین حرفه‌ای، تجهیزات مدرن و مربیانی که تو را به بهترین نسخه خودت
+              تبدیل می‌کنند.
             </p>
 
             <div class="hero-button">
+              <a href="#contact" class="btn"> شروع تمرین </a>
 
-                <a href="#" class="btn">
-                    شروع تمرین
-                </a>
-
-                <a href="#" class="btn-outline">
-                    مشاهده برنامه‌ها
-                </a>
-
+              <a href="#membership" class="btn-outline"> مشاهده برنامه‌ها </a>
             </div>
-
-            <div class="hero-scroll">
-                اسکرول کنید
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-    <section class="stats">
-
-    <div class="stats-container">
-
-        <div class="stats-card">
-            <h3>250+</h3>
-            <span>عضو فعال</span>
-        </div>
-
-        <div class="stats-card">
-            <h3>15</h3>
-            <span>مربی حرفه‌ای</span>
-        </div>
-
-        <div class="stats-card">
-            <h3>8</h3>
-            <span>سال تجربه</span>
-        </div>
-
-        <div class="stats-card">
-            <h3>24/7</h3>
-            <span>سرویس‌دهی</span>
-        </div>
-
-    </div>
-
-</section>
-    <section class="programs">
-      <div class="section-title">
-        <h3>برنامه‌های تمرینی</h3>
-        <p>مسیر تمرینی مناسب خودت را انتخاب کن</p>
-      </div>
-
-      <section class="programs">
-
-    <div class="section-title">
-        <h3>برنامه‌های تمرینی</h3>
-    </div>
-
-    <div class="programs-grid">
-
-        <div class="programs-card">
-            <img src="02-CrossFit.jpg" alt="کراس فیت">
-            <h4>کراس فیت</h4>
-            <span>قدرت، استقامت و سرعت</span>
-            <a href="#">مشاهده بیشتر ←</a>
-        </div>
-
-        <div class="programs-card">
-            <img src="03-Fitness.jpg" alt="تی آر ایکس">
-            <h4>تی آر ایکس</h4>
-            <span>تناسب اندام و سلامت عمومی</span>
-            <a href="#">مشاهده بیشتر ←</a>
-        </div>
-
-        <div class="programs-card">
-            <img src="04-FatLoss.jpg" alt="فیتنس">
-            <h4>فیتنس</h4>
-            <span>کنترل وزن و فرم‌دهی بدن</span>
-            <a href="#">مشاهده بیشتر ←</a>
-        </div>
-
-        <div class="programs-card">
-            <img src="05-Bodybuilding.jpg" alt="بدنسازی">
-            <h4>بدنسازی</h4>
-            <span>افزایش قدرت و حجم عضلات</span>
-            <a href="#">مشاهده بیشتر ←</a>
-        </div>
-
-    </div>
-
-</section>
-    <section class="gallery">
-      <div class="section-title">
-        <h3>فضای قدرت پلاس</h3>
-        <p>جایی برای ساختن نسخه قوی‌تر خودت</p>
-      </div>
-
-      <div class="gallery-grid">
-        <div class="gallery-card gallery-large">
-          <img src="09-Gallery-01.jpg" alt="سالن وزنه" />
-          <span>سالن وزنه</span>
-        </div>
-
-        <div class="gallery-card">
-          <img src="10-Gallery-02.jpg" alt="سالن کاردیو" />
-          <span>سالن کاردیو</span>
-        </div>
-
-        <div class="gallery-card">
-          <img src="11-Gallery-03.jpg" alt="سالن کراس فیت" />
-          <span>سالن کراس فیت</span>
-        </div>
-
-        <div class="gallery-card gallery-wide">
-          <img src="12-Gallery-04.jpg" alt="فضای باشگاه" />
-          <span>فضای باشگاه</span>
-        </div>
-      </div>
-    </section>
-    <section class="pricing">
-      <div class="section-title"><h3>پلن های عضویت</h3></div>
-      <div class="pricing-card">
-        <h4>ماهیانه</h4>
-        <span>تومان</span>
-        <h3>890,000</h3>
-        <p>دسترسی به سالن بدنسازی</p>
-        <p>برنامه تمرینی</p>
-        <p>مشاور اولیه</p>
-        <a class="btn" href="#">ثبت نام</a>
-      </div>
-      <div class="pricing-card">
-        <h4>سه ماهه</h4>
-        <span>تومان</span>
-        <h3>2,400,000</h3>
-        <p>دسترسی به تمامی سالن ها</p>
-        <p>برنامه تمرینی اختصاصی</p>
-        <p>مشاور اولیه</p>
-        <a class="btn" href="#">ثبت نام</a>
-      </div>
-      <div class="pricing-card">
-        <h4>سالانه VIP</h4>
-        <span>تومان</span>
-        <h3>8,900,000</h3>
-        <p>دسترسی به تماتی سالن ها</p>
-        <p>برنامه تمرینی اختصاصی</p>
-        <p>مربی اختصاصی</p>
-        <p>آنالیز بدن ماهانه</p>
-        <a class="btn-3" href="#">ثبت نام VIP</a>
-      </div>
-    </section>
-    <section class="consultation">
-      <div class="consultation-content">
-        <h2>دریافت و مشاوره رایگان</h2>
-        <p>فرم زیر را پر کنید تا کارشناسان ما با شما تماس بگیرند</p>
-        <div class="form">
-          <div class="name-form">
-            <label>نام و نام خانوادگی</label>
-            <input type="text" />
-          </div>
-          <div class="tel-form">
-            <label>شماره تماس</label>
-            <input type="tel" />
-          </div>
-          <form>
-            <label>هدف شما</label>
-            <select>
-              <option>بدنسازی</option>
-              <option>کراس فیت</option>
-              <option>تی ار ایکس</option>
-              <option>ژیمناستیک</option>
-            </select>
-          </form>
-          <div class="form-btn">
-            <a class="btn" href="#">دریافت مشاوره</a>
           </div>
         </div>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="footer-container">
-        <!-- درباره باشگاه -->
-        <div class="footer-brand">
-          <img
-            src="logo.png"
-            alt="لوگوی باشگاه قدرت پلاس"
-            class="footer-logo"
-          />
+
+        <a
+          href="#programs"
+          class="hero-scroll"
+          aria-label="رفتن به بخش برنامه‌ها"
+        >
+          <span class="scroll-mouse"></span>
+          <span>اسکرول کنید</span>
+        </a>
+      </section>
+
+      <!-- =====================================================
+           STATS
+      ====================================================== -->
+
+      <section class="stats" aria-label="آمار باشگاه">
+        <div class="stats-card reveal">
+          <h3 class="counter" data-target="250" data-suffix="+">0</h3>
+
+          <span> عضو فعال </span>
+        </div>
+
+        <div class="stats-card reveal">
+          <h3 class="counter" data-target="15">0</h3>
+
+          <span> مربی حرفه‌ای </span>
+        </div>
+
+        <div class="stats-card reveal">
+          <h3 class="counter" data-target="8">0</h3>
+
+          <span> سال تجربه </span>
+        </div>
+
+        <div class="stats-card reveal">
+          <h3 class="counter" data-target="24" data-suffix="/7">0</h3>
+
+          <span> سرویس‌دهی </span>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           PROGRAMS
+      ====================================================== -->
+
+      <section class="programs section-space" id="programs">
+        <div class="section-title reveal">
+          <span> مسیر مناسب خودت را پیدا کن </span>
+
+          <h2>برنامه‌های تمرینی</h2>
 
           <p>
-            ما اینجا هستیم تا به تو کمک کنیم قوی‌تر، سالم‌تر و حرفه‌ای‌تر از
-            همیشه باشی.
+            با توجه به هدف و سطح آمادگی بدنی خودت، بهترین مسیر تمرینی را انتخاب
+            کن.
           </p>
         </div>
 
-        <!-- دسترسی سریع -->
-        <div class="footer-column">
-          <h3>دسترسی سریع</h3>
+        <div class="programs-grid">
+          <article class="programs-card reveal">
+            <div class="card-image">
+              <img src="02-CrossFit.jpg" alt="تمرین کراس فیت" loading="lazy" />
+            </div>
 
-          <ul>
-            <li>
-              <a href="#home">خانه</a>
-            </li>
+            <div class="program-card-content">
+              <h3>کراس فیت</h3>
 
-            <li>
-              <a href="#programs">برنامه‌ها</a>
-            </li>
+              <p>قدرت، استقامت و سرعت</p>
 
-            <li>
-              <a href="#trainers">مربیان</a>
-            </li>
+              <a href="#contact">
+                مشاهده بیشتر
+                <span>←</span>
+              </a>
+            </div>
+          </article>
 
-            <li>
-              <a href="#gallery">گالری</a>
-            </li>
+          <article class="programs-card reveal">
+            <div class="card-image">
+              <img src="03-Fitness.jpg" alt="تمرین تی آر ایکس" loading="lazy" />
+            </div>
 
-            <li>
-              <a href="#membership">عضویت</a>
-            </li>
-          </ul>
+            <div class="program-card-content">
+              <h3>تی آر ایکس</h3>
+
+              <p>تناسب اندام و سلامت عمومی</p>
+
+              <a href="#contact">
+                مشاهده بیشتر
+                <span>←</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="programs-card reveal">
+            <div class="card-image">
+              <img src="04-FatLoss.jpg" alt="تمرین فیتنس" loading="lazy" />
+            </div>
+
+            <div class="program-card-content">
+              <h3>فیتنس</h3>
+
+              <p>کنترل وزن و فرم‌دهی بدن</p>
+
+              <a href="#contact">
+                مشاهده بیشتر
+                <span>←</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="programs-card reveal">
+            <div class="card-image">
+              <img
+                src="05-Bodybuilding.jpg"
+                alt="تمرین بدنسازی"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="program-card-content">
+              <h3>بدنسازی</h3>
+
+              <p>افزایش قدرت و حجم عضلات</p>
+
+              <a href="#contact">
+                مشاهده بیشتر
+                <span>←</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           TRAINERS
+      ====================================================== -->
+
+      <section class="trainers section-space" id="trainers">
+        <div class="section-title reveal">
+          <span> تیم حرفه‌ای قدرت پلاس </span>
+
+          <h2>مربیان حرفه‌ای ما</h2>
+
+          <p>با کمک مربیان متخصص، تمریناتت را اصولی‌تر و هدفمندتر دنبال کن.</p>
         </div>
 
-        <!-- خدمات -->
-        <div class="footer-column">
-          <h3>خدمات</h3>
+        <div class="trainers-grid">
+          <article class="trainers-card reveal">
+            <img src="trainer-01.jpg" alt="مربی بدنسازی" loading="lazy" />
 
-          <ul>
-            <li>
-              <a href="#">بدنسازی</a>
-            </li>
+            <div class="trainer-info">
+              <span class="trainer-role"> مربی بدنسازی </span>
 
-            <li>
-              <a href="#">فیتنس</a>
-            </li>
+              <h3>علی رضایی</h3>
 
-            <li>
-              <a href="#">کراس فیت</a>
-            </li>
+              <p>تخصص در عضله‌سازی و افزایش قدرت</p>
+            </div>
+          </article>
 
-            <li>
-              <a href="#">جربی‌سوزی</a>
-            </li>
+          <article class="trainers-card reveal">
+            <img src="trainer-02.jpg" alt="مربی کراس فیت" loading="lazy" />
 
-            <li>
-              <a href="#">مشاوره تخصصی</a>
-            </li>
-          </ul>
+            <div class="trainer-info">
+              <span class="trainer-role"> مربی کراس فیت </span>
+
+              <h3>محمد کریمی</h3>
+
+              <p>تخصص در تمرینات عملکردی و استقامتی</p>
+            </div>
+          </article>
+
+          <article class="trainers-card reveal">
+            <img src="trainer-03.jpg" alt="مربی فیتنس" loading="lazy" />
+
+            <div class="trainer-info">
+              <span class="trainer-role"> مربی فیتنس </span>
+
+              <h3>سارا احمدی</h3>
+
+              <p>تخصص در فرم‌دهی و تناسب اندام</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           GALLERY
+      ====================================================== -->
+
+      <section class="gallery section-space" id="gallery">
+        <div class="section-title reveal">
+          <span> قدرت پلاس را از نزدیک ببین </span>
+
+          <h2>فضای قدرت پلاس</h2>
+
+          <p>جایی برای ساختن نسخه قوی‌تر خودت</p>
         </div>
 
-        <!-- تماس -->
-        <div class="footer-contact">
-          <h3>اطلاعات تماس</h3>
+        <div class="gallery-grid">
+          <button
+            class="gallery-card gallery-large reveal"
+            type="button"
+            data-image="09-Gallery-01.jpg"
+            data-title="سالن وزنه"
+          >
+            <img src="09-Gallery-01.jpg" alt="سالن وزنه" loading="lazy" />
 
-          <p>📞 ۰۲۱-۱۲۳۴۵۶۷۸</p>
+            <span> سالن وزنه </span>
+          </button>
 
-          <p>📍 تهران، خیابان ولیعصر، بالاتر از پارک ملت</p>
+          <button
+            class="gallery-card reveal"
+            type="button"
+            data-image="10-Gallery-02.jpg"
+            data-title="سالن کاردیو"
+          >
+            <img src="10-Gallery-02.jpg" alt="سالن کاردیو" loading="lazy" />
 
-          <p>✉ info@qudratplus.com</p>
+            <span> سالن کاردیو </span>
+          </button>
 
-          <div class="footer-social">
-            <a href="#" aria-label="Instagram"> Instagram </a>
+          <button
+            class="gallery-card reveal"
+            type="button"
+            data-image="11-Gallery-03.jpg"
+            data-title="سالن کراس فیت"
+          >
+            <img src="11-Gallery-03.jpg" alt="سالن کراس فیت" loading="lazy" />
 
-            <a href="#" aria-label="WhatsApp"> WhatsApp </a>
+            <span> سالن کراس فیت </span>
+          </button>
 
-            <a href="#" aria-label="Telegram"> Telegram </a>
+          <button
+            class="gallery-card gallery-wide reveal"
+            type="button"
+            data-image="12-Gallery-04.jpg"
+            data-title="فضای باشگاه"
+          >
+            <img src="12-Gallery-04.jpg" alt="فضای باشگاه" loading="lazy" />
+
+            <span> فضای باشگاه </span>
+          </button>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           PRICING
+      ====================================================== -->
+
+      <section class="pricing section-space" id="membership">
+        <div class="section-title reveal">
+          <span> عضویت در قدرت پلاس </span>
+
+          <h2>پلن‌های عضویت</h2>
+
+          <p>پلنی را انتخاب کن که با هدف و سبک تمرینت هماهنگ باشد.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- MONTHLY -->
+
+          <article class="pricing-card reveal">
+            <div class="pricing-top">
+              <h3>ماهیانه</h3>
+
+              <span> مناسب شروع </span>
+            </div>
+
+            <div class="price">
+              <strong> 890,000 </strong>
+
+              <span> تومان / ماه </span>
+            </div>
+
+            <ul>
+              <li>دسترسی به سالن بدنسازی</li>
+
+              <li>برنامه تمرینی</li>
+
+              <li>مشاوره اولیه</li>
+            </ul>
+
+            <a href="#contact" class="pricing-btn"> ثبت نام </a>
+          </article>
+
+          <!-- THREE MONTH -->
+
+          <article class="pricing-card popular reveal">
+            <div class="popular-badge">محبوب‌ترین انتخاب</div>
+
+            <div class="pricing-top">
+              <h3>سه ماهه</h3>
+
+              <span> انتخاب هوشمندانه </span>
+            </div>
+
+            <div class="price">
+              <strong> 2,400,000 </strong>
+
+              <span> تومان / ۳ ماه </span>
+            </div>
+
+            <ul>
+              <li>دسترسی به تمامی سالن‌ها</li>
+
+              <li>برنامه تمرینی اختصاصی</li>
+
+              <li>مشاوره اولیه</li>
+
+              <li>پشتیبانی تمرینی</li>
+            </ul>
+
+            <a href="#contact" class="pricing-btn"> ثبت نام </a>
+          </article>
+
+          <!-- VIP -->
+
+          <article class="pricing-card vip reveal">
+            <div class="vip-badge">VIP</div>
+
+            <div class="pricing-top">
+              <h3>سالانه VIP</h3>
+
+              <span> کامل‌ترین پلن </span>
+            </div>
+
+            <div class="price">
+              <strong> 8,900,000 </strong>
+
+              <span> تومان / سال </span>
+            </div>
+
+            <ul>
+              <li>دسترسی به تمامی سالن‌ها</li>
+
+              <li>برنامه تمرینی اختصاصی</li>
+
+              <li>مربی اختصاصی</li>
+
+              <li>آنالیز بدن ماهانه</li>
+            </ul>
+
+            <a href="#contact" class="pricing-btn"> ثبت نام VIP </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           CONSULTATION
+      ====================================================== -->
+
+      <section class="consultation" id="contact">
+        <div class="consultation-content reveal">
+          <div class="consultation-heading">
+            <span> اولین قدم را همین امروز بردار </span>
+
+            <h2>مشاوره رایگان دریافت کن</h2>
+
+            <p>
+              فرم زیر را پر کنید تا کارشناسان ما برای راهنمایی بیشتر با شما تماس
+              بگیرند.
+            </p>
+          </div>
+
+          <form class="consultation-form" id="consultationForm" novalidate>
+            <div class="form-group">
+              <label for="name"> نام و نام خانوادگی </label>
+
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="مثلاً علی رضایی"
+                autocomplete="name"
+                required
+              />
+
+              <small class="form-error"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="phone"> شماره تماس </label>
+
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                inputmode="tel"
+                placeholder="مثلاً 09121234567"
+                autocomplete="tel"
+                required
+              />
+
+              <small class="form-error"></small>
+            </div>
+
+            <div class="form-group full">
+              <label for="goal"> هدف شما </label>
+
+              <select id="goal" name="goal" required>
+                <option value="">هدف تمرینی خود را انتخاب کنید</option>
+
+                <option value="bodybuilding">بدنسازی</option>
+
+                <option value="crossfit">کراس فیت</option>
+
+                <option value="trx">تی آر ایکس</option>
+
+                <option value="fitness">فیتنس</option>
+
+                <option value="fatloss">چربی‌سوزی</option>
+              </select>
+
+              <small class="form-error"></small>
+            </div>
+
+            <button type="submit" class="btn consultation-submit">
+              دریافت مشاوره
+            </button>
+          </form>
+
+          <div class="form-success" id="formSuccess" role="status">
+            درخواست شما با موفقیت ثبت شد. کارشناسان ما به‌زودی با شما تماس
+            می‌گیرند.
           </div>
         </div>
-      </div>
+      </section>
+    </main>
 
-      <!-- پایین فوتر -->
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
 
-      <div class="footer-bottom">
-        <p>© ۱۴۰۳ قدرت پلاس | تمامی حقوق محفوظ است.</p>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <!-- BRAND -->
+
+          <div class="footer-brand">
+            <a href="#home">
+              <img
+                src="logo.png"
+                alt="لوگوی باشگاه قدرت پلاس"
+                class="footer-logo"
+              />
+            </a>
+
+            <p>
+              ما اینجا هستیم تا به تو کمک کنیم قوی‌تر، سالم‌تر و حرفه‌ای‌تر از
+              همیشه باشی.
+            </p>
+          </div>
+
+          <!-- QUICK LINKS -->
+
+          <div class="footer-column">
+            <h3>دسترسی سریع</h3>
+
+            <ul>
+              <li>
+                <a href="#home"> خانه </a>
+              </li>
+
+              <li>
+                <a href="#programs"> برنامه‌ها </a>
+              </li>
+
+              <li>
+                <a href="#trainers"> مربیان </a>
+              </li>
+
+              <li>
+                <a href="#gallery"> گالری </a>
+              </li>
+
+              <li>
+                <a href="#membership"> عضویت </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- SERVICES -->
+
+          <div class="footer-column">
+            <h3>خدمات</h3>
+
+            <ul>
+              <li>
+                <a href="#programs"> بدنسازی </a>
+              </li>
+
+              <li>
+                <a href="#programs"> فیتنس </a>
+              </li>
+
+              <li>
+                <a href="#programs"> کراس فیت </a>
+              </li>
+
+              <li>
+                <a href="#programs"> چربی‌سوزی </a>
+              </li>
+
+              <li>
+                <a href="#contact"> مشاوره تخصصی </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- CONTACT -->
+
+          <div class="footer-contact">
+            <h3>اطلاعات تماس</h3>
+
+            <p>📞 ۰۲۱-۱۲۳۴۵۶۷۸</p>
+
+            <p>📍 تهران، خیابان ولیعصر، بالاتر از پارک ملت</p>
+
+            <p>✉ info@qudratplus.com</p>
+
+            <div class="footer-social">
+              <a href="#" aria-label="Instagram"> Instagram </a>
+
+              <a href="#" aria-label="WhatsApp"> WhatsApp </a>
+
+              <a href="#" aria-label="Telegram"> Telegram </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© ۱۴۰۳ قدرت پلاس | تمامی حقوق محفوظ است.</p>
+        </div>
       </div>
     </footer>
+
+    <!-- =====================================================
+         LIGHTBOX
+    ====================================================== -->
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button" aria-label="بستن">×</button>
+
+      <button class="lightbox-prev" type="button" aria-label="تصویر قبلی">
+        →
+      </button>
+
+      <div class="lightbox-content">
+        <img id="lightboxImage" src="" alt="" />
+
+        <p id="lightboxTitle"></p>
+      </div>
+
+      <button class="lightbox-next" type="button" aria-label="تصویر بعدی">
+        ←
+      </button>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
